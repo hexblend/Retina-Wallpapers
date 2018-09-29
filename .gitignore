@@ -26,3 +26,5 @@ package.json
 package-lock.json
 gulpfile.js
 public
+LICENSE.txt
+.gitignore
