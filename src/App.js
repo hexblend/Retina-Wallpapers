@@ -17,10 +17,9 @@ class App extends Component {
   getInput = async (e) => {
     const keyword = e.target.elements.keyword.value;
     e.preventDefault();
-    const api_call = await fetch(`https://api.unsplash.com/search/photos?client_id=${API_KEY}&page=1&query=${keyword}&orientation=landscape`);
+    const api_call = await fetch(`https://api.unsplash.com/search/photos?client_id=${API_KEY}&page=1&query=${keyword}&orientation=landscape&per_page=40&order_by=popular`);
     const data = await api_call.json();
     this.setState({ photos: data.results });
-    console.log(this.state.photos);
   }
 
   render() {
@@ -32,7 +31,7 @@ class App extends Component {
         </header>
         <div className="container-fluid body-container">
           <div className="row">
-          
+
             <Form getInput={this.getInput}/>
             <Photos getPhotos={this.state.photos}/>
           </div>
