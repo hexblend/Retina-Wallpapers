@@ -5,6 +5,7 @@ import './Assets/css/main.min.css';
 
 // Components
 import Form from './Components/Form';
+import Photos from './Components/Photos';
 
 const API_KEY = '1686e47585b8407987d325464925639fa05f1195fca4b2c201d4dae923a7f274';
 
@@ -31,17 +32,9 @@ class App extends Component {
         </header>
         <div className="container-fluid body-container">
           <div className="row">
-
+          
             <Form getInput={this.getInput}/>
-
-                {this.state.photos && this.state.photos.map((photo) => {
-                  return (
-                    <div key={photo.id} className="col-md-4">
-                      {photo.height >= 1600 && photo.width >= 2560 && <img src={photo.urls.small} alt={photo.urls.description} /> }
-                    </div>
-                  );
-                })}
-
+            <Photos getPhotos={this.state.photos}/>
           </div>
         </div>
       </div>
