@@ -1,5 +1,5 @@
 # Retina-Wallpapers
 Work in progress
 
-## Preview
-![](preview.jpg)
+### Preview
+![](preview.png)
