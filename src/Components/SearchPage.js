@@ -32,10 +32,7 @@ class SearchPage extends Component {
                 <div className="container-fluid body-container">
                     <div className="row">
 
-                        <Form 
-                            getInput={this.getInput} 
-                            searched={this.state.keyword}
-                        />
+                        <Form />
                         <Photos getPhotos={this.state.photos} />
                     </div>
                 </div>
