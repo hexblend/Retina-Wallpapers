@@ -12,13 +12,15 @@ class Form extends React.Component {
 
     render(){
         return (
-            <form>
+            <form className="Form-Component">
                 <input 
                 type="text" 
                 value={this.state.value} 
                 onChange={this.handleChange} 
                 name="keyword" 
-                placeholder="Search images..." />
+                placeholder="Search images..." 
+                autocomplete="off"
+                />
 
                 <Link to={`/search/${this.state.value}`}>
                     <button onClick={this.props.onSubmit} style={{display: 'none'}}>    

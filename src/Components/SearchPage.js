@@ -31,12 +31,16 @@ class SearchPage extends Component {
 
     render() {
         return (
-            <div>
-                <Titles />
-                <Form onSubmit={this.getInput} value={this.props.match.params.keyword}/>
+            <div className="SearchPage">
                 <Link to='/'>
-                    <button>Home Page</button>
+                    <button className="backButton">Go Back</button>
                 </Link>
+                <header>
+                    <div className="center-elements">
+                        <Titles />
+                        <Form onSubmit={this.getInput} value={this.props.match.params.keyword} />
+                    </div>
+                </header>
                 <Photos getPhotos={this.state.photos} />
             </div>
         );
