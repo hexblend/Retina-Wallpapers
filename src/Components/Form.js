@@ -19,7 +19,7 @@ class Form extends React.Component {
                 onChange={this.handleChange} 
                 name="keyword" 
                 placeholder="Search images..." 
-                autocomplete="off"
+                autoComplete="off"
                 />
 
                 <Link to={`/search/${this.state.value}`}>

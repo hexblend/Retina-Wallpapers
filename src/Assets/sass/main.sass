@@ -6,7 +6,6 @@
     background: url('../img/landing-bg.jpg') no-repeat center center fixed
     background-size: cover
     text-align: center
-
     .center-elements
         background: rgba(0,0,0,0)
         width: 100%
@@ -15,7 +14,12 @@
         justify-content: center
         align-items: center
         flex-direction: column
-
+        div
+            .unsplash-logo
+                width: 100px
+                height: 19px
+                background: url('../img/unsplash-low.png')
+    
 .Titles-Component
     width: 100%
     padding: 0 10px
@@ -71,58 +75,58 @@
 
 .SearchPage
     text-align: center
-    .backButton
-        position: absolute
-        left: 10px
-        top: 15px
-        background: rgba(0,0,0,0)
-        padding: 5px 10px
-        border: 1px solid lighten($lightgrey, 5%)
-        border-radius: 5px
-        transition: .2s ease-in-out
-        color: darken($lightgrey, 20%)
-        &:hover
-            cursor: pointer
-            background: lighten($lightgrey, 5%)
-            color: darken($lightgrey, 40%)
-            border-color: lighten($lightgrey, 5%)
+.backButton
+    position: absolute
+    left: 10px
+    top: 15px
+    background: rgba(0,0,0,0)
+    padding: 5px 10px
+    border: 1px solid lighten($lightgrey, 5%)
+    border-radius: 5px
+    transition: .2s ease-in-out
+    color: darken($lightgrey, 20%)
+    &:hover
+        cursor: pointer
+        background: lighten($lightgrey, 5%)
+        color: darken($lightgrey, 40%)
+        border-color: lighten($lightgrey, 5%)
             
-    header
-        width: 100%
-        text-align: center
-        margin: 0px 0 3px 0
-        background: #fafafa
-        border-bottom: 1px solid #e2e2e2
-        background-size: cover
-        .center-elements
-            padding-top: 10px
-            width: 100vw
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-direction: column
-            @media(max-width: 530px)
-                padding-top: 30px
-            .Form-Component
-                margin: 15px 0 20px 0
-                
-                input[type=text]
-                    border-color: lighten($lightgrey, 5%)
-                    color: darken($lightgrey, 30%)
-                    @media(min-width: 530px)
-                        font-size: 0.8em
-                        padding: 10px
-                    &::placeholder
-                        color: darken($lightgrey, 20%)
-            .Titles-Component
-                margin-top: 20px
-                h1
-                    color: darken($lightgrey, 65%)
-                    font-size: 2em
-                    font-family: $paragraph_fontStack
-                p
-                    font-size: 1.2em
-                    color: darken($lightgrey, 30%)
+header
+    width: 100%
+    text-align: center
+    margin: 0px 0 3px 0
+    background: #fafafa
+    border-bottom: 1px solid #e2e2e2
+    background-size: cover
+    .center-elements
+        padding-top: 10px
+        width: 100vw
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        @media(max-width: 530px)
+            padding-top: 30px
+        .Form-Component
+            margin: 15px 0 20px 0
+            
+            input[type=text]
+                border-color: lighten($lightgrey, 5%)
+                color: darken($lightgrey, 30%)
+                @media(min-width: 530px)
+                    font-size: 0.8em
+                    padding: 10px
+                &::placeholder
+                    color: darken($lightgrey, 20%)
+        .Titles-Component
+            margin-top: 20px
+            h1
+                color: darken($lightgrey, 65%)
+                font-size: 2em
+                font-family: $paragraph_fontStack
+            p
+                font-size: 1.2em
+                color: darken($lightgrey, 30%)
 
 .Photos-Component
     .PhotosGrid
@@ -149,6 +153,37 @@
                 width: 100%
                 display: block
                 transition: all .2s
+
+.Photo-Component
+    .SectionElements
+        display: block
+        width: 90%
+        border: 1px solid #e2e2e2
+        border-radius: 5px
+        margin: 0 auto
+        padding: 10px
+        .FlexSection
+            display: flex
+            .Image
+                width: 60%
+                img
+                    max-width: 100%
+            .Text
+                width: 40%
+                padding-left: 10px
+                text-align: center
+                display: flex
+                align-items: center
+                justify-content: center
+                h2
+                    font-family: $paragraph_fontStack
+                    font-weight: 400
+
+
+    header
+        padding-bottom: 25px
+        margin-bottom: 40px
+
                 
             
                     

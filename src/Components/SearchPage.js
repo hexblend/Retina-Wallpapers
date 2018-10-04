@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 // Components
 import Titles from './Titles';
@@ -33,7 +33,7 @@ class SearchPage extends Component {
         return (
             <div className="SearchPage">
                 <Link to='/'>
-                    <button className="backButton">Go Back</button>
+                    <button className="backButton" onClick={this.props.history.goBack}>Go Back</button>
                 </Link>
                 <header>
                     <div className="center-elements">
@@ -47,4 +47,4 @@ class SearchPage extends Component {
     }
 }
 
-export default SearchPage;
+export default withRouter(SearchPage);
