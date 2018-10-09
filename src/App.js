@@ -6,6 +6,7 @@ import './Assets/css/main.min.css';
 // Components
 import Titles from './Components/Titles';
 import Form from './Components/Form';
+import Credentials from './Components/Credentials';
 
 class App extends Component {
   render() {
@@ -15,11 +16,7 @@ class App extends Component {
           <Titles />
           <Form />
         </div>
-        <div className="credentials">
-          <p>An app by <a href="vladb.uk">Vlad Bibire</a></p>
-          <p>Photo library by <a href="unsplash.com">Unsplash</a></p>
-          <p>&copy; 2018 Retina Wallpapers</p>
-        </div>
+        <Credentials />
       </div>
     );
   }

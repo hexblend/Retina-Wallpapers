@@ -6,6 +6,7 @@
     background: url('../img/landing-bg.jpg') no-repeat center center fixed
     background-size: cover
     text-align: center
+    overflow-x: hidden
     .center-elements
         background: rgba(0,0,0,0)
         width: 100%
@@ -14,25 +15,6 @@
         justify-content: center
         align-items: center
         flex-direction: column
-    .credentials
-        position: fixed
-        bottom: 5px
-        right: 10px
-        text-align: right
-        width: 250px
-        @media(max-width: 530px)
-            text-align: center
-            width: 100%
-        p
-            font-weight: 300
-            color: darken($lightgrey, 30%)
-            font-size: 15px
-            a
-                text-decoration: none
-                color: darken($lightgrey, 20%)
-                &:hover
-                    color: $lightgrey
-
     
 .Titles-Component
     width: 100%
@@ -62,6 +44,43 @@
         @media(min-width: 3300px)
             font-size: 2em
 
+.Credentials-Component
+    position: fixed
+    bottom: 5px
+    right: 10px
+    text-align: right
+    width: 250px
+    @media(max-width: 530px)
+        text-align: center
+        width: 100%
+    p
+        font-weight: 300
+        color: darken($lightgrey, 30%)
+        font-size: 15px
+        a
+            text-decoration: none
+            color: darken($lightgrey, 20%)
+            &:hover
+                color: $lightgrey
+.Footer-Component
+    width: 100%
+    height: 50px
+    background: #fafafa
+    border-top: 1px solid #e2e2e2
+    margin-top: 5px
+    .Credentials-Component
+        position: relative
+        width: 100%
+        p
+            height: 10px
+            padding-top: 20px
+            text-align: center
+        p:nth-child(2)
+            display: none
+        p:nth-child(1)
+            display: none
+
+
 .Form-Component
     width: 100vw
     margin: 20px 0
@@ -83,12 +102,13 @@
 
         @media(min-width: 330px)
             width: 80%
+            font-size: 1em
         @media(min-width: 530px)
             width: 40%
-            font-size: 1em
 
 .SearchPage
     text-align: center
+    overflow-x: hidden
 .backButton
     position: absolute
     left: 10px
@@ -169,83 +189,89 @@ header
                 transition: all .2s
 
 .Photo-Component
+    min-height: 100vh
     overflow-x: hidden
-    .SectionElements
-        display: block
-        width: 90%
-        border: 1px solid #e2e2e2
-        border-radius: 5px
-        margin: 0 auto
-        padding: 20px
-        @media(max-width: 950px)
-                padding: 10px
-        .FlexSection
-            display: flex
+    display: flex
+    flex-direction: column
+    .content
+        flex: 1;
+        .SectionElements
+            display: block
+            width: 90%
+            border: 1px solid #e2e2e2
+            border-radius: 5px
+            margin: 0 auto
+            padding: 20px
+            margin-bottom: 20px
             @media(max-width: 950px)
-                flex-direction: column
-            .Image
-                width: 60%
+                    padding: 10px
+            .FlexSection
+                display: flex
                 @media(max-width: 950px)
-                    width: 100%
-                    margin-bottom: 20px
-                img
-                    max-width: 100%
-            .Text
-                width: 40%
-                padding-left: 60px
-                text-align: left
-                @media(max-width: 950px)
-                    width: 100%
-                    padding-left: 0
-                    text-align: center
-                .title-row
-                    display: flex
-                    justify-content: space-between
-                    margin-bottom: 20px
+                    flex-direction: column
+                .Image
+                    width: 60%
                     @media(max-width: 950px)
-                        justify-content: center
-                        flex-direction: column
-                        margin-bottom: 15px
-                h2,h4
-                    font-family: $paragraph_fontStack
-                    font-weight: 700
-                h4 span
-                    font-weight: 400
-                    line-height: 1.4em
-                button, a
-                    background: rgba(0,0,0,0)
-                    padding: 5px 10px
-                    border: 1px solid lighten($lightgrey, 5%)
-                    border-radius: 5px
-                    transition: .2s ease-in-out
-                    color: darken($lightgrey, 20%)
-                    &:hover
-                        cursor: pointer
-                        background: lighten($lightgrey, 5%)
-                        color: darken($lightgrey, 30%)
-                        border-color: lighten($lightgrey, 5%)
+                        width: 100%
+                        margin-bottom: 20px
+                    img
+                        max-width: 100%
+                .Text
+                    width: 40%
+                    padding-left: 60px
+                    text-align: left
                     @media(max-width: 950px)
-                        width: 80px
-                        margin: 0 auto
-                        margin-top: 15px
-                .DownloadBtnTwo
-                    text-decoration: none
-                    font-size: 11px
-                    line-height: 55px
-                    @media(max-width: 950px)
+                        width: 100%
+                        padding-left: 0
+                        text-align: center
+                    .title-row
+                        display: flex
+                        justify-content: space-between
+                        margin-bottom: 20px
+                        @media(max-width: 950px)
+                            justify-content: center
+                            flex-direction: column
+                            margin-bottom: 15px
+                    h2,h4
+                        font-family: $paragraph_fontStack
+                        font-weight: 700
+                    h4 span
+                        font-weight: 400
+                        line-height: 1.4em
+                    button, a
+                        background: rgba(0,0,0,0)
+                        padding: 5px 10px
+                        border: 1px solid lighten($lightgrey, 5%)
+                        border-radius: 5px
+                        transition: .2s ease-in-out
+                        color: darken($lightgrey, 20%)
+                        &:hover
+                            cursor: pointer
+                            background: lighten($lightgrey, 5%)
+                            color: darken($lightgrey, 30%)
+                            border-color: lighten($lightgrey, 5%)
+                        @media(max-width: 950px)
+                            width: 80px
+                            margin: 0 auto
+                            margin-top: 15px
+                    .DownloadBtnTwo
+                        text-decoration: none
+                        font-size: 11px
+                        line-height: 55px
+                        @media(max-width: 950px)
+                            display: none
+                    .DownloadBtnOne
                         display: none
-                .DownloadBtnOne
-                    display: none
-                    text-decoration: none
-                    font-size: 11px
-                    @media(max-width: 950px)
-                        display: inline
-                        margin-right: 5px
-    header
-        padding-bottom: 25px
-        margin-bottom: 40px
-        @media(max-width: 950px)
-                margin-bottom: 30px
+                        text-decoration: none
+                        font-size: 11px
+                        @media(max-width: 950px)
+                            display: inline
+                            margin-right: 5px
+        header
+            .center-elements
+                padding-top: 0
+            padding-bottom: 25px
+            margin-bottom: 20px
 
                 
             

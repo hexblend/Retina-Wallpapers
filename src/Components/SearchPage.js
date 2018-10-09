@@ -5,6 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 import Titles from './Titles';
 import Form from './Form';
 import Photos from './Photos';
+import Footer from './Footer';
 
 const API_KEY = '1686e47585b8407987d325464925639fa05f1195fca4b2c201d4dae923a7f274';
 
@@ -42,6 +43,7 @@ class SearchPage extends Component {
                     </div>
                 </header>
                 <Photos getPhotos={this.state.photos} />
+                <Footer />
             </div>
         );
     }
