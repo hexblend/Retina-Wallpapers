@@ -14,11 +14,25 @@
         justify-content: center
         align-items: center
         flex-direction: column
-        div
-            .unsplash-logo
-                width: 100px
-                height: 19px
-                background: url('../img/unsplash-low.png')
+    .credentials
+        position: fixed
+        bottom: 5px
+        right: 10px
+        text-align: right
+        width: 250px
+        @media(max-width: 530px)
+            text-align: center
+            width: 100%
+        p
+            font-weight: 300
+            color: darken($lightgrey, 30%)
+            font-size: 15px
+            a
+                text-decoration: none
+                color: darken($lightgrey, 20%)
+                &:hover
+                    color: $lightgrey
+
     
 .Titles-Component
     width: 100%
@@ -227,9 +241,6 @@ header
                     @media(max-width: 950px)
                         display: inline
                         margin-right: 5px
-                
-
-
     header
         padding-bottom: 25px
         margin-bottom: 40px
