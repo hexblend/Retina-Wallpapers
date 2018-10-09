@@ -88,7 +88,7 @@
     &:hover
         cursor: pointer
         background: lighten($lightgrey, 5%)
-        color: darken($lightgrey, 40%)
+        color: darken($lightgrey, 30%)
         border-color: lighten($lightgrey, 5%)
             
 header
@@ -155,34 +155,86 @@ header
                 transition: all .2s
 
 .Photo-Component
+    overflow-x: hidden
     .SectionElements
         display: block
         width: 90%
         border: 1px solid #e2e2e2
         border-radius: 5px
         margin: 0 auto
-        padding: 10px
+        padding: 20px
+        @media(max-width: 950px)
+                padding: 10px
         .FlexSection
             display: flex
+            @media(max-width: 950px)
+                flex-direction: column
             .Image
                 width: 60%
+                @media(max-width: 950px)
+                    width: 100%
+                    margin-bottom: 20px
                 img
                     max-width: 100%
             .Text
                 width: 40%
-                padding-left: 10px
-                text-align: center
-                display: flex
-                align-items: center
-                justify-content: center
-                h2
+                padding-left: 60px
+                text-align: left
+                @media(max-width: 950px)
+                    width: 100%
+                    padding-left: 0
+                    text-align: center
+                .title-row
+                    display: flex
+                    justify-content: space-between
+                    margin-bottom: 20px
+                    @media(max-width: 950px)
+                        justify-content: center
+                        flex-direction: column
+                        margin-bottom: 15px
+                h2,h4
                     font-family: $paragraph_fontStack
+                    font-weight: 700
+                h4 span
                     font-weight: 400
+                    line-height: 1.4em
+                button, a
+                    background: rgba(0,0,0,0)
+                    padding: 5px 10px
+                    border: 1px solid lighten($lightgrey, 5%)
+                    border-radius: 5px
+                    transition: .2s ease-in-out
+                    color: darken($lightgrey, 20%)
+                    &:hover
+                        cursor: pointer
+                        background: lighten($lightgrey, 5%)
+                        color: darken($lightgrey, 30%)
+                        border-color: lighten($lightgrey, 5%)
+                    @media(max-width: 950px)
+                        width: 80px
+                        margin: 0 auto
+                        margin-top: 15px
+                .DownloadBtnTwo
+                    text-decoration: none
+                    font-size: 11px
+                    line-height: 55px
+                    @media(max-width: 950px)
+                        display: none
+                .DownloadBtnOne
+                    display: none
+                    text-decoration: none
+                    font-size: 11px
+                    @media(max-width: 950px)
+                        display: inline
+                        margin-right: 5px
+                
 
 
     header
         padding-bottom: 25px
         margin-bottom: 40px
+        @media(max-width: 950px)
+                margin-bottom: 30px
 
                 
             

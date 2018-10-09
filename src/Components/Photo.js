@@ -22,9 +22,6 @@ class Photo extends React.Component {
         const photo = this.state.currentPhoto;
         return(
             <div className="Photo-Component">
-                <Link to='/'>
-                    <button className="backButton" onClick={this.props.history.goBack}>Go Back</button>
-                </Link>
                 <header>
                     <div className="center-elements">
                         <Titles />
@@ -37,7 +34,22 @@ class Photo extends React.Component {
                                 <img src={photo.urls.regular} alt={photo.description} />
                             </div>
                             <div className="Text">
-                                <h2>By {photo.user.name}</h2>
+                                <div className="title-row">
+                                    <h2>By {photo.user.name}</h2>
+                                    <div className="buttons">
+                                    <a href={photo.links.download + '?force=true'} className="DownloadBtnOne" download>
+                                        Download
+                                    </a>
+                                        <button onClick={this.props.history.goBack}>Go Back</button>
+                                    </div>
+                                </div>
+                                <h4>Location: <span>{photo.user.location}</span></h4>
+                                <h4>Original resolution: <span>{photo.width}x{photo.height}</span></h4>
+                                <h4>Views: <span>{photo.views.toLocaleString()}</span></h4>
+                                <h4>Downloads: <span>{photo.downloads.toLocaleString()}</span></h4>
+                                <a href={photo.links.download + '?force=true'} className="DownloadBtnTwo" download>
+                                    Download
+                                </a>
                             </div>
                         </div>
                     }
