@@ -8,9 +8,9 @@ import Photo from './Photo';
 const Router = () => (
     <BrowserRouter>
         <Switch>
-            <Route path="/" component={App} exact />
-            <Route path="/search/:keyword" component={SearchPage} />
-            <Route path="/photo/:id" component={Photo} />
+            <Route path="/Retina-Wallpapers/" component={App} exact />
+            <Route path="/Retina-Wallpapers/search/:keyword" component={SearchPage} />
+            <Route path="/Retina-Wallpapers/photo/:id" component={Photo} />
         </Switch>
     </BrowserRouter>
 );

@@ -22,7 +22,7 @@ class Form extends React.Component {
                 autoComplete="off"
                 />
 
-                <Link to={`/search/${this.state.value}`}>
+                <Link to={`/Retina-Wallpapers/search/${this.state.value}`}>
                     <button onClick={this.props.onSubmit} style={{display: 'none'}}>    
                         Search Button
                     </button>
